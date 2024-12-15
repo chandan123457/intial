@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Swap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h1>Welcome to Skill Swap</h1>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../bidding/bidding.html">Bidding</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Skill Swap Section -->
+        <section id="swap">
+            <h2>Find Your Skill Swap Partner</h2>
+            <p class="description">
+                Connect with others who can teach you a skill while learning something from you in return.
+            </p>
+            <div id="step-container">
+                <!-- Step 1: Input "What skill do you know?" -->
+                <div class="step-card" id="step1">
+                    <h3>What skill do you know?</h3>
+                    <input type="text" id="know" placeholder="Enter a skill..." class="input-field">
+                    <button onclick="goToNextStep()" class="large-btn">Next</button>
+                </div>
+
+                <!-- Step 2: Input "What skill do you want to learn?" -->
+                <div class="step-card hidden" id="step2">
+                    <h3>What skill do you want to learn?</h3>
+                    <input type="text" id="learn" placeholder="Enter a skill..." class="input-field">
+                    <button onclick="searchSwap()" class="large-btn">Match</button>
+                </div>
+            </div>
+
+            <!-- Loader and Results -->
+            <div id="loader" class="loader hidden"></div>
+            <div id="results" class="results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Skill Swap. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

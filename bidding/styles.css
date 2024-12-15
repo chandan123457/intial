@@ -1,0 +1,173 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #1a1a2e, #16213e);
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    background-color: #0f3460;
+    color: white;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin: 0;
+    flex-grow: 1;
+}
+
+nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1a759f;
+}
+
+/* Main Content */
+main {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #e0e0e0;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+/* Task Cards */
+.task {
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    padding: 1.5em;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin: 1.5em 0;
+    width: 100%;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.task h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #c4e0e5;
+}
+
+.task p {
+    font-size: 1.1em;
+    color: #dcdcdc;
+    margin: 0.5em 0;
+}
+
+/* Buttons */
+.bid-btn,
+.large-btn {
+    padding: 0.8em 1.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.large-btn {
+    background: #22c55e;
+    color: white;
+}
+
+.large-btn:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+.bid-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.bid-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    z-index: 1000;
+    color: #ffffff;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f87171;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #334155;
+    color: white;
+}
+
+/* Bid Container */
+.bid-container {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: #1e293b;
+    border-radius: 5px;
+    color: #e2e8f0;
+}
