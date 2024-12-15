@@ -95,6 +95,13 @@ main {
     transition: border-color 0.3s;
 }
 
+/* Placeholder Styling */
+.input-field::placeholder {
+    color: white;
+    opacity: 0.8;
+    font-style: italic;
+}
+
 .input-field:focus {
     border-color: #4db3ba;
     outline: none;
