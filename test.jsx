@@ -176,23 +176,25 @@ h2 {
 
 
 
-General Body Styling
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 100%);
+    color: #333;
 }
 
 /* Navbar */
 header {
-    background-color: #4db3ba;
+    background: linear-gradient(90deg, #4db3ba, #2b6777);
     color: white;
-    padding: 1em 2em;
+    padding: 1.5em 2em;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 header nav {
@@ -202,19 +204,20 @@ header nav {
 }
 
 header h1 {
-    font-size: 1.8em;
-    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .nav-links a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
-    margin: 0 1em;
-    font-size: 1.1em;
+    margin: 0 1.5em;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #fad0c4;
 }
 
 /* Main Section */
@@ -224,17 +227,25 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Skill Swap Cards */
 .step-card {
     background: white;
-    padding: 2em;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2.5em;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     max-width: 500px;
     text-align: center;
-    transition: opacity 0.5s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5em;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
 .hidden {
@@ -242,39 +253,49 @@ main {
 }
 
 .input-field {
-    width: 80%;
-    padding: 0.7em;
-    margin: 1em 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 85%;
+    padding: 0.8em;
+    margin: 1.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1em;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
 }
 
+.input-field:focus {
+    border-color: #4db3ba;
+    outline: none;
+}
+
+/* Buttons */
 .large-btn {
-    background-color: #4CAF50;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
     color: white;
     border: none;
-    padding: 0.8em 1.5em;
+    padding: 0.9em 2em;
     font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .large-btn:hover {
-    background-color: #45a049;
+    background: linear-gradient(90deg, #45a049, #4CAF50);
     transform: scale(1.05);
 }
 
-/* Loader and Results */
+/* Loader */
 .loader {
     margin: 2em auto;
-    border: 8px solid #f3f3f3;
+    border: 8px solid rgba(255, 255, 255, 0.3);
     border-top: 8px solid #4CAF50;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes spin {
@@ -282,22 +303,31 @@ main {
     100% { transform: rotate(360deg); }
 }
 
-.results p {
-    margin-top: 1em;
-    font-size: 1.1em;
-    color: #555;
+/* Results */
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 2em;
+    max-width: 100%;
 }
 
-/* Result Card Styles */
 .result-card {
     background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
     padding: 16px;
     margin: 8px;
     text-align: center;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
 .result-card h3 {
@@ -307,12 +337,6 @@ main {
 
 .result-card p {
     margin: 0.5em 0;
-}
-
-/* Adjust display to inline-flex */
-.results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+    color: #666;
+    font-size: 1em;
 }
